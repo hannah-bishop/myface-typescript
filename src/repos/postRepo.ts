@@ -58,7 +58,7 @@ export async function createPost(newPost: CreatePostRequest): Promise<void> {
         .insert({
             message: newPost.message,
             imageUrl: newPost.imageUrl,
-            userId: 1,
+            userId: newPost.userId,
             createdAt: database.fn.now(),
         }, '*');
 }
