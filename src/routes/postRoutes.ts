@@ -10,6 +10,7 @@ router.get('/', async (request, response) => {
     const pageSize = request.query.pageSize ? parseInt(request.query.pageSize as string) : 10;
 
     const postList = await getPageOfPosts(page, pageSize);
+    console.log(postList.results[0])
     return response.render('post_list', postList);
 });
 
