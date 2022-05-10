@@ -2,23 +2,28 @@
 <%- include('_head') -%>
 <%- include('_header') -%>
 <body>
-<h1>Posts</h1>
-<ol>
-    <% results.forEach(function(post) {%>
-        <li>
+<h1 class="center-text" class="fixed">Posts</h1>
+<nav class="fixed">
+    <a href="/posts/create/">Create Post</a>
+</nav>
+
+<ul>
+    <% results.forEach(function(post,user) {%>
+        <li class = center>
+            <br>
+            <p class="larger-text"><a href="/users/<%= post.postedBy.id %>/"><%= post.postedBy.name %></a></p>
+            <br>
+            <p><%= post.message %></p>
+            <br>
             <img 
             src ="<%= post.imageUrl %>"
             width ="100"
             >
             <br>
-            <%= post.postedBy.name %>
-            <br>
-            <%= post.message %>
-            <br>
-            <%= post.createdAt %>
+            <p><%= post.createdAt %></p>
         </li>
     <% }); %>
-</ol>
+</ul>
 
 <%if (previous) { %>
     <a href="<%= previous %>">Previous</a>

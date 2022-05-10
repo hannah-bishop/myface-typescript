@@ -1,1 +1,65 @@
 /* Add your styles here. */
+li img {
+    width: 30%;
+    margin: auto;
+    display: block;
+}
+.center-text {
+    text-align: center;
+}
+h1 {
+    margin-bottom: 40px;
+    font-size: 70;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+h2 {
+    margin-bottom: 40px;
+    font-size: 40;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+li {
+    text-align: center;
+    border-bottom: solid;
+    border-color: black;
+    margin: 2%;
+}
+p {
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+.larger-text {
+    font-size: 30;
+}
+ul {
+    list-style: none
+}
+a {
+    color: inherit; 
+} 
+nav {
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 20;
+    background-color: black;
+    color: white;
+}
+.fixed {
+    position: fixed;
+}
+.relative {
+    position: relative;
+  }
+.absolute {
+    position: absolute;
+    left: 15%;
+    top: 25%;
+    border-style: solid;
+    border-color: black;
+    width: 20%;
+}
+label {
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+.cover-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover
+}
