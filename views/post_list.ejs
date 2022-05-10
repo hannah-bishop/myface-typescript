@@ -11,7 +11,7 @@
     <% results.forEach(function(post,user) {%>
         <li class = center>
             <br>
-            <p class="larger-text"><a href="/users/<%= post.postedBy.id %>/"><%= post.postedBy.name %></a></p>
+            <p class="larger-text"><a href="/users/<%= post.postedBy.id %>/"><%= post.postedBy.name %></a><img class = "profile-picture" src = "<%= post.postedBy.profileImageUrl %>"></p>
             <br>
             <p><%= post.message %></p>
             <br>
