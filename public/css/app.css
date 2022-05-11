@@ -3,6 +3,7 @@ body {
     background-color: #252A38;
     color: #DCDCDC;
     font-family: "Segoe UI", "Open Sans";
+    margin: 0px;
 }
 li img {
     width: 100%;
@@ -10,6 +11,30 @@ li img {
     margin: auto;
     object-fit: cover;
 }
+
+.profile-details{
+    padding-left: 40%;
+    position: absolute;
+    top: 13%;
+}
+
+.title{
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.profile-username {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.profile-email {
+    font-weight: 300;
+    font-size: 14px;
+    margin-top: 0;
+}
+
 .post__username {
     margin: 0;
     font-weight: 600;
@@ -28,22 +53,38 @@ li img {
 .profile-posts {
     background-color: #151820;
     margin-bottom: 24px;
+    display: inline-block;
+    margin-left: 24px;
 }
+
+.scrolling-posts{
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.post-image{
+    width: 100%;
+    height: 30%;
+    margin: auto;
+    object-fit: cover;
+}
+
 .post-text {
     padding-top: 8qpx;
     padding-bottom: 16px;
     padding-left: 12px;
     padding-right: 12px;
 }
-.center-text {
-    text-align: center;
-}
+
 .larger-text {
     font-size: 30;
 }
-.subtitle {
+
+.profile-subtitle {
     font-size: 20px;
+    margin-left: 24px;
 }
+
 ul {
     list-style: none;
     padding: 0;
@@ -64,17 +105,13 @@ nav {
   }
 .absolute {
     position: absolute;
-    left: 15%;
-    top: 25%;
-    border-style: solid;
-    border-color: black;
-    width: 20%;
 }
 
 .cover-image {
     width: 100%;
     height: 20%;
-    object-fit: cover
+    object-fit: cover;
+    margin-bottom: 18%;
 }
 
 .profile-picture {
@@ -82,4 +119,15 @@ nav {
     height: 10vw;
     object-fit: cover;
     margin-top: 10px;
+}
+
+.profile-image {
+    left: 5.5%;
+    top: 13.5%;
+    border-style: solid;
+    border-color: #DCDCDC;
+    border-width: 4px;
+    border-radius: 50%;
+    width: 28%;
+    position: absolute;
 }

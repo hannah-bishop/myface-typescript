@@ -8,21 +8,20 @@
     src = "<%= coverImageUrl %>"
     >
 <img 
-    class = "absolute"
     class = "profile-image"
     src ="<%= profileImageUrl %>"
     >
-<h2 class="center-text"><%= name %></h1>
-<p class="center-text">username: <%= username %></p>
-<p class="center-text">email: <%= email %></p>
-<p class="subtitle"><%= name %>'s Posts</p>
-<ul>
+<div class = "profile-details">
+    <h2 class = "title"><%= name %></h1>
+    <p class = "profile-username"><%= username %></p>
+    <p class = "profile-email"><%= email %></p>
+</div>
+
+<p class= "profile-subtitle"><%= name %>'s Posts</p>
+<ul class = "scrolling-posts">
     <% posts.forEach(function(post) {%>
         <li class="profile-posts">
-            <img 
-            src ="<%= post.imageUrl %>"
-            width ="100"
-            >
+            <img class = "post-image" src ="<%= post.imageUrl %>">
             <div class="post-text">
                 <p class="post__username"><%= username %></p>
                 <p class="post__timestamp"><%= post.createdAt %></p>
