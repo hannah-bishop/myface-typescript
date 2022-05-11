@@ -16,7 +16,7 @@
     <p class = "profile-username"><%= username %></p>
     <p class = "profile-email"><%= email %></p>
 </div>
-
+<div class="empty-box"></div>
 <p class= "profile-subtitle"><%= name %>'s Posts</p>
 <ul class = "scrolling-posts">
     <% posts.forEach(function(post) {%>
@@ -30,6 +30,20 @@
         </li>
     <% }); %>
 </ul>
+
+<ul class = "scrolling-posts">
+    <% likes.forEach(function(like) {%>
+        <li class="profile-posts">
+            <img class = "post-image" src ="<%= like.imageUrl %>">
+            <div class="post-text">
+                <p class="post__username"><%= username %></p>
+                <p class="post__timestamp"><%= like.createdAt %></p>
+                <p class="post__message"><%= like.message %></p>
+            </div>
+        </li>
+    <% }); %>
+</ul>
+
 
 </body>
 
