@@ -2,7 +2,7 @@
 body {
     background-color: #252A38;
     color: #DCDCDC;
-    font-family: "Segoe UI", "Open Sans";
+    font-family: "Segoe UI", "Open Sans", "sans-serif";
     margin: 0px;
 }
 li img {
@@ -10,6 +10,18 @@ li img {
     height: 30%;
     margin: auto;
     object-fit: cover;
+}
+
+.profile-image {
+    left: 5.5%;
+    top: 13.5%;
+    border-style: solid;
+    border-color: #DCDCDC;
+    border-width: 4px;
+    border-radius: 50%;
+    width: 28%;
+    position: absolute;
+    z-index: 1;
 }
 
 .profile-details{
@@ -60,10 +72,16 @@ li img {
 }
 .profile-posts {
     background-color: #151820;
-    width: 66%;
+    width: 75%;
     margin-bottom: 24px;
     display: inline-block;
     margin-left: 24px;
+    transition: transform 0.3s;
+}
+
+.profile-posts:hover {
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
 .scrolling-posts{
@@ -129,17 +147,4 @@ nav {
     height: 10vw;
     object-fit: cover;
     margin-top: 10px;
-}
-
-.profile-image {
-    left: 5.5%;
-    top: 13.5%;
-    border-style: solid;
-    border-color: #DCDCDC;
-    border-width: 4px;
-    border-radius: 50%;
-    width: 28%;
-    position: absolute;
-    z-index: 1;
-    
 }

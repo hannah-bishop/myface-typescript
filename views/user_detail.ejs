@@ -16,29 +16,46 @@
     <p class = "profile-username"><%= username %></p>
     <p class = "profile-email"><%= email %></p>
 </div>
+
 <div class="empty-box"></div>
+
 <p class= "profile-subtitle"><%= name %>'s Posts</p>
 <ul class = "scrolling-posts">
     <% posts.forEach(function(post) {%>
-        <li class="profile-posts">
+        <li class= "profile-posts" >
             <img class = "post-image" src ="<%= post.imageUrl %>">
             <div class="post-text">
                 <p class="post__username"><%= username %></p>
                 <p class="post__timestamp"><%= post.createdAt %></p>
-                <p class="post__message"><%= post.message %></p>
+                <p class="post__message"><%= post.message.slice(0,35) + (post.message.length > 35 ? "..." : "") %></p>
             </div>
         </li>
     <% }); %>
 </ul>
 
+<p class= "profile-subtitle"><%= name %>'s Likes</p>
 <ul class = "scrolling-posts">
     <% likes.forEach(function(like) {%>
         <li class="profile-posts">
             <img class = "post-image" src ="<%= like.imageUrl %>">
             <div class="post-text">
-                <p class="post__username"><%= username %></p>
+                <p class="post__username"><%= like.id %></p>
                 <p class="post__timestamp"><%= like.createdAt %></p>
                 <p class="post__message"><%= like.message %></p>
+            </div>
+        </li>
+    <% }); %>
+</ul>
+
+<p class= "profile-subtitle"><%= name %>'s Dislikes</p>
+<ul class = "scrolling-posts">
+    <% dislikes.forEach(function(dislike) {%>
+        <li class="profile-posts">
+            <img class = "post-image" src ="<%= dislike.imageUrl %>">
+            <div class="post-text">
+                <p class="post__username"><%= dislike.id %></p>
+                <p class="post__timestamp"><%= dislike.createdAt %></p>
+                <p class="post__message"><%= dislike.message %></p>
             </div>
         </li>
     <% }); %>
