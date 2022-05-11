@@ -15,18 +15,19 @@
 <h2 class="center-text"><%= name %></h1>
 <p class="center-text">username: <%= username %></p>
 <p class="center-text">email: <%= email %></p>
-
+<p class="subtitle"><%= name %>'s Posts</p>
 <ul>
     <% posts.forEach(function(post) {%>
-        <li class = center>
-            <p><%= post.message %></p>
-            <br>
+        <li class="profile-posts">
             <img 
             src ="<%= post.imageUrl %>"
             width ="100"
             >
-            <br>
-            <p><%= post.createdAt %></p>
+            <div class="post-text">
+                <p class="post__username"><%= username %></p>
+                <p class="post__timestamp"><%= post.createdAt %></p>
+                <p class="post__message"><%= post.message %></p>
+            </div>
         </li>
     <% }); %>
 </ul>

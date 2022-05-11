@@ -1,42 +1,57 @@
 /* Add your styles here. */
+body {
+    background-color: #252A38;
+    color: #DCDCDC;
+    font-family: "Segoe UI", "Open Sans";
+}
 li img {
-    width: 30%;
+    width: 100%;
+    height: 30%;
     margin: auto;
-    display: block;
+    object-fit: cover;
+}
+.post__username {
+    margin: 0;
+    font-weight: 600;
+    font-size: 14px;
+}
+.post__timestamp {
+    margin: 0;
+    font-weight: 300;
+    font-size: 10px;
+}
+.post__message {
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom:0;
+}
+.profile-posts {
+    background-color: #151820;
+    margin-bottom: 24px;
+}
+.post-text {
+    padding-top: 8qpx;
+    padding-bottom: 16px;
+    padding-left: 12px;
+    padding-right: 12px;
 }
 .center-text {
     text-align: center;
 }
-h1 {
-    margin-bottom: 40px;
-    font-size: 70;
-    font-family: "Lucida Console", "Courier New", monospace;
-}
-h2 {
-    margin-bottom: 40px;
-    font-size: 40;
-    font-family: "Lucida Console", "Courier New", monospace;
-}
-li {
-    text-align: center;
-    border-bottom: solid;
-    border-color: black;
-    margin: 2%;
-}
-p {
-    font-family: "Lucida Console", "Courier New", monospace;
-}
 .larger-text {
     font-size: 30;
 }
+.subtitle {
+    font-size: 20px;
+}
 ul {
-    list-style: none
+    list-style: none;
+    padding: 0;
 }
 a {
     color: inherit; 
 } 
 nav {
-    font-family: "Lucida Console", "Courier New", monospace;
     font-size: 20;
     background-color: black;
     color: white;
@@ -55,12 +70,10 @@ nav {
     border-color: black;
     width: 20%;
 }
-label {
-    font-family: "Lucida Console", "Courier New", monospace;
-}
+
 .cover-image {
     width: 100%;
-    height: 300px;
+    height: 20%;
     object-fit: cover
 }
 
@@ -68,5 +81,5 @@ label {
     width: 10vw;
     height: 10vw;
     object-fit: cover;
-    margin-top: 15px;
+    margin-top: 10px;
 }
