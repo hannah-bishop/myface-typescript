@@ -5,11 +5,13 @@
 <h1 class="center-text" class="fixed">Posts</h1>
 <nav class="fixed">
     <a href="/posts/create/">Create Post</a>
+    <br>
+    <button id = "random-button">Click me!</button>
 </nav>
 
 <ul>
     <% results.forEach(function(post,user) {%>
-        <li class = center>
+        <li class = profile-posts>
             <br>
             <p class="larger-text"><a href="/users/<%= post.postedBy.id %>/"><%= post.postedBy.name %></a><img class = "profile-picture" src = "<%= post.postedBy.profileImageUrl %>"></p>
             <br>
