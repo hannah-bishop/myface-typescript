@@ -12,6 +12,14 @@ li img {
     object-fit: cover;
 }
 
+.menu-items-none {
+    display: none;
+}
+
+.menu-items-none.menu-items-there {
+    display: inline;
+}
+
 .profile-image {
     left: 5.5%;
     top: 13.5%;

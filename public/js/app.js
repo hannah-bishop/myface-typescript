@@ -19,3 +19,9 @@ button.addEventListener("click", function() {
     }
 });
 
+const menuButton = document.getElementById("menu-button");
+
+menuButton.addEventListener("click", function() {
+    let element = document.getElementById("menu-list");
+    element.classList.toggle("menu-items-there");
+});
