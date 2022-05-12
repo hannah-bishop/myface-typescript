@@ -24,3 +24,21 @@ menuButton.addEventListener("click", function() {
     let element = document.getElementById("menu-list");
     element.classList.toggle("menu-items-there");
 });
+
+const menu = document.getElementById("main-menu-id");
+
+document.addEventListener('click', function(event) {
+    var isClickInside = menu.contains(event.target);
+    if (!isClickInside) {
+        let element = document.getElementById("menu-list");
+        element.classList.remove("menu-items-there");
+    }
+});
+
+
+document.addEventListener("keydown", function(event) {
+    if ('Escape' === event.key) {
+        let element = document.getElementById("menu-list");
+        element.classList.remove("menu-items-there");
+    }
+});
