@@ -21,8 +21,8 @@
             <br>
             <p> <%= post.likedBy.length %> likes </p>
             <p> <%= post.dislikedBy.length %> dislikes </p>
-            <p><button onclick = "likePost(<%= post.id %>)">Like👍</button> 
-            <button onclick = "dislikePost(<%= post.id %>)">Dislike👎</button>
+            <p><button class = "default-button" onclick = "likePost(<%= post.id %>)">Like👍</button> 
+            <button class = "default-button" onclick = "dislikePost(<%= post.id %>)">Dislike👎</button>
             </p>
         </li>
     <% }); %>

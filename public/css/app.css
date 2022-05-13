@@ -24,6 +24,19 @@ li img {
     display: inline;
 }
 
+.default-button {
+    background-color: #151820;
+    color: inherit;
+    font-family: inherit;
+    border: 2px solid #252A38;
+    border-radius: 6px;
+}
+
+.default-button:hover {
+    background-color: #252A38;
+    color:#2985FF;
+}
+
 .main-menu {
     position: fixed;
     right: 0;
