@@ -35,6 +35,23 @@ document.addEventListener('click', function(event) {
     }
 });
 
+function likePost(postId) {
+    fetch(
+        `/posts/${postId}/like`,
+        {
+            method: "POST"
+        }
+    );
+}
+
+function dislikePost(postId) {
+    fetch(
+        `/posts/${postId}/dislike`,
+        {
+            method: "POST"
+        }
+    );
+}
 
 document.addEventListener("keydown", function(event) {
     if ('Escape' === event.key) {
@@ -42,3 +59,4 @@ document.addEventListener("keydown", function(event) {
         element.classList.remove("menu-items-there");
     }
 });
+
