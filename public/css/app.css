@@ -29,6 +29,34 @@ li img {
     right: 0;
     z-index: 2;
     background-color: #151820;
+    border-bottom-left-radius: 6px;
+    border-top-left-radius: 6px;
+}
+
+#menu-button {
+    background-color: #151820;
+    color: inherit;
+    font-family: inherit;
+    border: 2px solid #252A38;
+    border-radius: 6px;
+}
+
+#menu-button:hover{
+    background-color: #252A38;
+    color:#2985FF;
+}
+
+#random-button{
+    background-color: #151820;
+    color: inherit;
+    font-family: inherit;
+    border: 2px solid #252A38;
+    border-radius: 6px;
+}
+
+#random-button:hover{
+    background-color: #252A38;
+    color:#2985FF;
 }
 
 .profile-image {
