@@ -1,6 +1,6 @@
 import express from "express";
 import {CreatePostRequest} from "../models/api/createPostRequest";
-import {createPost, dislikePost, getPageOfPosts, likePost} from "../services/postService";
+import {createPost, dislikePost, getPageOfPosts, getPost, likePost} from "../services/postService";
 import { body, validationResult } from "express-validator";
 
 const router = express.Router()
@@ -33,7 +33,7 @@ router.post('/create/',
     return response.redirect('/posts/');
 });
 
-router.post('/:postId/like/', async (request, response) => {
+router.get('/:postId/like/', async (request, response) => {
     const userId = 1; // For now, just assume that we are user 1
     const postId = parseInt(request.params.postId);
     const returnUrl = request.params?.returnUrl;
@@ -49,6 +49,12 @@ router.post('/:postId/dislike/', async (request, response) => {
 
     await dislikePost(userId, postId);
     response.redirect(returnUrl || "/posts/");
+});
+
+router.get('/:postId/', async (request, response) => {
+    const postId = parseInt(request.params.postId);
+    const post = await getPost(postId);
+    return response.render('post_detail', post);
 });
 
 export default router;

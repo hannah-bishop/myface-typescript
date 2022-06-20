@@ -8,19 +8,18 @@
     <% results.forEach(function(post) {%>
         <li class = profile-posts>
             <br>
-            <p class="larger-text"><a href="/users/<%= post.postedBy.id %>/"><%= post.postedBy.name %></a><img class = "profile-picture" src = "<%= post.postedBy.profileImageUrl %>"></p>
-            <br>
-            <p><%= post.message %></p>
-            <br>
-            <img 
-            src ="<%= post.imageUrl %>"
-            width ="100"
-            >
-            <br>
-            <p><%= post.createdAt %></p>
-            <br>
-            <p> <%= post.likedBy.length %> likes </p>
-            <p> <%= post.dislikedBy.length %> dislikes </p>
+            <p class="larger-text">
+                <img class = "profile-picture" src = "<%= post.postedBy.profileImageUrl %>">
+                <a href="/users/<%= post.postedBy.id %>/"><%= post.postedBy.name %></a>
+            </p>
+            <a href = "/posts/<%= post.id %>"><img class = "post-image" src ="<%= post.imageUrl %>"></a>
+            <div class = "post-text">
+                <p class="post__username"><%= post.postedBy.username %></p>
+                <p class="post__timestamp"><%= post.createdAt %></p>
+                <p class="post__message"><%= post.message %></p>
+                <p> <%= post.likedBy.length %> likes </p>
+                <p> <%= post.dislikedBy.length %> dislikes </p>
+            </div>
             <p><button class = "default-button" onclick = "likePost(<%= post.id %>)">Like👍</button> 
             <button class = "default-button" onclick = "dislikePost(<%= post.id %>)">Dislike👎</button>
             </p>

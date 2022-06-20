@@ -38,6 +38,11 @@ export async function dislikePost(userId: number, postId: number): Promise<void>
     return createInteraction(userId, postId, "DISLIKE");
 }
 
+export async function getPost(postId: number): Promise<PostModel> {
+    const post = await postRepo.getPost(postId);
+    return toPostModel(post);
+}
+
 async function toPostModel(post: Post): Promise<PostModel> {
     return {
         id: post.id,

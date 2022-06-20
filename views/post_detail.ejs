@@ -1,0 +1,17 @@
+<html lang="en-gb">
+<%- include('_head') -%>
+<%- include('_header') -%>
+<body>
+<h1 class = "page-title">Post Details</h1>
+<div class= "profile-posts">
+    <img class = "post-image" src ="<%= imageUrl %>">
+    <div class="post-text">
+        <br />
+        <a href = "/users/<%= postedBy.id %>/" class = "post__username"><%= postedBy.username %></a>
+        <p class="post__timestamp"><%= createdAt %></p>
+        <p class="post__message"><%= message.slice(0,35) + (message.length > 35 ? "..." : "") %></p>
+    </div>
+</div>
+</body>
+<%- include('_footer') -%>
+</html>

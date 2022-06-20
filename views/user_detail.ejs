@@ -23,7 +23,7 @@
 <ul class = "scrolling-posts">
     <% posts.forEach(function(post) {%>
         <li class= "profile-posts" >
-            <img class = "post-image" src ="<%= post.imageUrl %>">
+            <a href = "/posts/<%= post.id %>"><img class = "post-image" src ="<%= post.imageUrl %>"></a>
             <div class="post-text">
                 <p class="post__username"><%= username %></p>
                 <p class="post__timestamp"><%= post.createdAt %></p>
@@ -37,7 +37,7 @@
 <ul class = "scrolling-posts">
     <% likes.forEach(function(like) {%>
         <li class="profile-posts">
-            <img class = "post-image" src ="<%= like.imageUrl %>">
+            <a href  = "/posts/<%= like.id %>"><img class = "post-image" src ="<%= like.imageUrl %>"></a>
             <div class="post-text">
                 <p class="post__username"><%= like.id %></p>
                 <p class="post__timestamp"><%= like.createdAt %></p>
@@ -51,7 +51,7 @@
 <ul class = "scrolling-posts">
     <% dislikes.forEach(function(dislike) {%>
         <li class="profile-posts">
-            <img class = "post-image" src ="<%= dislike.imageUrl %>">
+            <a href  = "/posts/<%= dislike.id %>"><img class = "post-image" src ="<%= dislike.imageUrl %>"></a>
             <div class="post-text">
                 <p class="post__username"><%= dislike.id %></p>
                 <p class="post__timestamp"><%= dislike.createdAt %></p>

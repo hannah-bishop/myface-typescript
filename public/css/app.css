@@ -30,11 +30,13 @@ li img {
     font-family: inherit;
     border: 2px solid #252A38;
     border-radius: 6px;
+    transition-duration: 0.6s;
 }
 
 .default-button:hover {
     background-color: #252A38;
     color:#2985FF;
+    transition-duration: 0.6s;
 }
 
 .main-menu {
@@ -167,6 +169,7 @@ li img {
 
 .larger-text {
     font-size: 30;
+    margin: 0 0 0 10px;
 }
 
 .profile-subtitle {
@@ -203,10 +206,17 @@ nav {
 }
 
 .profile-picture {
-    width: 10vw;
-    height: 10vw;
+    width: 15vw;
+    height: 15vw;
     object-fit: cover;
     margin-top: 10px;
+    border-style: solid;
+    border-color: #DCDCDC;
+    border-width: 2px;
+    border-radius: 50%;
+    position: relative;
+    top: 20px;
+    right: 5px;
 }
 
 a:link {
