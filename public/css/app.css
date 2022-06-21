@@ -14,6 +14,7 @@ li img {
 
 .page-title{
     margin-top: 10px;
+    margin-left: 24px;
 }
 
 .menu-items-none {
@@ -161,7 +162,7 @@ li img {
 }
 
 .post-text {
-    padding-top: 8qpx;
+    padding-top: 8px;
     padding-bottom: 16px;
     padding-left: 12px;
     padding-right: 12px;
@@ -198,6 +199,15 @@ nav {
     position: absolute;
 }
 
+#post-delete {
+    position: relative;
+    top: 12px;
+    left: 88%;
+    background-color: #252A38;
+    border-radius: 0.2em;
+    padding: 14px 8px 14px 8px;
+}
+
 .cover-image {
     width: 100%;
     height: 20%;
@@ -217,6 +227,47 @@ nav {
     position: relative;
     top: 20px;
     right: 5px;
+}
+
+#post_detail-post {
+    background-color: #151820;
+    width: 85%;
+    margin-bottom: 24px;
+    display: inline-block;
+    margin-left: 24px;
+    transition: transform 0.3s;
+}
+
+#post_detail-image {
+    width: 100%;
+    height: 30%;
+    margin: auto;
+    object-fit: cover;
+}
+
+#post_detail-text {
+    padding-top: 0px;
+    padding-bottom: 16px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+#post_detail-username {
+    margin: 0;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+#post_detail-timestamp {
+    margin: 0;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+#post_detail-message {
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom:0;
 }
 
 a:link {

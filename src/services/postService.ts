@@ -30,6 +30,10 @@ export async function createPost(newPost: CreatePostRequest): Promise<void> {
     await postRepo.createPost(newPost);
 }
 
+export async function deletePost(postId: number): Promise<void> {
+    await postRepo.deletePost(postId);
+}
+
 export async function likePost(userId: number, postId: number): Promise<void> {
     return createInteraction(userId, postId, "LIKE");
 }

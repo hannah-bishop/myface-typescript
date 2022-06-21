@@ -3,13 +3,13 @@
 <%- include('_header') -%>
 <body>
 <h1 class = "page-title">Post Details</h1>
-<div class= "profile-posts">
-    <img class = "post-image" src ="<%= imageUrl %>">
-    <div class="post-text">
-        <br />
-        <a href = "/users/<%= postedBy.id %>/" class = "post__username"><%= postedBy.username %></a>
-        <p class="post__timestamp"><%= createdAt %></p>
-        <p class="post__message"><%= message.slice(0,35) + (message.length > 35 ? "..." : "") %></p>
+<div id= "post_detail-post">
+    <img id = "post_detail-image" src ="<%= imageUrl %>">
+    <i id = "post-delete" class="fa-solid fa-xmark fa-lg" onclick = "deletePost(<%= id %>)"></i>
+    <div id="post_detail-text">
+        <a href = "/users/<%= postedBy.id %>/" id = "post_detail-username"><%= postedBy.username %></a>
+        <p id="post_detail-timestamp"><%= createdAt %></p>
+        <p id="post_detail-message"><%= message.slice(0,35) + (message.length > 35 ? "..." : "") %></p>
     </div>
 </div>
 </body>

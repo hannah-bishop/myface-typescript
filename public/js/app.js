@@ -53,6 +53,15 @@ function dislikePost(postId) {
     );
 }
 
+function deletePost(postId) {
+    fetch(
+        `/posts/${postId}/delete`,
+        {
+            method: "POST"
+        }
+    );
+}
+
 document.addEventListener("keydown", function(event) {
     if ('Escape' === event.key) {
         let element = document.getElementById("menu-list");

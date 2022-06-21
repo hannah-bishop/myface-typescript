@@ -41,6 +41,16 @@ export async function getPost(postId: number): Promise<Post> {
     return single(posts);
 }
 
+export async function deletePost(postId: number): Promise<void> {
+    await database<Post>('posts')
+        .select('*')
+        .where('id', postId)
+        .del()
+            .then(function(result) {
+                console.log(result == 1 ? "Post deleted successfully." : "Post could not be deleted.");
+            })
+}
+
 export async function getPostsByUserInteraction(page: number, pageSize: number, userId: number, interactionType: InteractionType): Promise<PostModel[]>  {
     return database<Post>('posts')
         .innerJoin('interactions', 'interactions.postId', 'posts.id')

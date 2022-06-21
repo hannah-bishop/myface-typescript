@@ -2,6 +2,7 @@ import express from "express";
 import {CreatePostRequest} from "../models/api/createPostRequest";
 import {createPost, dislikePost, getPageOfPosts, getPost, likePost} from "../services/postService";
 import { body, validationResult } from "express-validator";
+import { deletePost } from "../repos/postRepo";
 
 const router = express.Router()
 
@@ -50,6 +51,13 @@ router.post('/:postId/dislike/', async (request, response) => {
     await dislikePost(userId, postId);
     response.redirect(returnUrl || "/posts/");
 });
+
+router.post('/:postId/delete/', async (request, response) => {
+    const postId = parseInt(request.params.postId);
+    const returnUrl = request.params?.returnUrl;
+    await deletePost(postId);
+    response.redirect(returnUrl || "/posts/");
+})
 
 router.get('/:postId/', async (request, response) => {
     const postId = parseInt(request.params.postId);
